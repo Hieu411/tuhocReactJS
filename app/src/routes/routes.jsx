@@ -3,6 +3,7 @@ import HomePage from "../pages/HomePage";
 import LoginPage from "../components/authentication/LoginPage";
 import RegisterPage from "../components/authentication/RegisterPage";
 import NotFoundPage from "../pages/NotFoundPage";
+import CrudPage from "../pages/crud_Page";
 
 import "../index.css";
 
@@ -26,7 +27,10 @@ const routes = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout />,
-    children: [{ index: true, element: <HomePage /> }],
+    children: [
+      { index: true, element: <HomePage /> },
+      { path: "crud", element: <CrudPage /> },
+    ],
   },
 
   // User Routes
